@@ -11,7 +11,7 @@ jobs:
         with:
           python-version: "3.11"
           cache: pip
-      - run: pip install -r requirements.txt pytest ruff
+      - run: pip install -r requirements.txt pytest ruff==0.15.11
       - run: ruff check .
       - name: Library tests (synthetic data, no market data needed)
         run: pytest -q

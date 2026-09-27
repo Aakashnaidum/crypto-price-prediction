@@ -1,5 +1,5 @@
 -r requirements.txt
 pytest>=8
-ruff>=0.6
+ruff==0.15.11
 # Optional: live candle pre-fill in the web app and rebuilding data from Yahoo Finance
 yfinance>=0.2.61
