@@ -1,0 +1,92 @@
+{
+  "bitcoin": {
+    "model": "Ridge[candle]",
+    "trained_through": "2026-05-08",
+    "selection": "lowest validation MAE inside the training block",
+    "validation_mae": {
+      "Ridge[candle]": 551.0077859432035,
+      "RandomForest[candle]": 566.9058042956879,
+      "HistGradientBoosting[candle]": 600.1283381824973
+    },
+    "test_period": "2024-04-03 to 2026-05-07",
+    "n_test": 765,
+    "model_mae": 1472.8854577329064,
+    "persistence_mae": 1459.5459660947713,
+    "mae_vs_persistence": 1.009139480323341,
+    "directional_accuracy": 0.4928104575163399,
+    "dm_p_value": 0.011059029669342668,
+    "beats_persistence": false
+  },
+  "ethereum": {
+    "model": "Ridge[candle]",
+    "trained_through": "2026-05-08",
+    "selection": "lowest validation MAE inside the training block",
+    "validation_mae": {
+      "Ridge[candle]": 52.73890579696176,
+      "RandomForest[candle]": 54.93986172065999,
+      "HistGradientBoosting[candle]": 56.90860128581529
+    },
+    "test_period": "2024-09-14 to 2026-05-07",
+    "n_test": 601,
+    "model_mae": 77.25214026798378,
+    "persistence_mae": 76.40377731450187,
+    "mae_vs_persistence": 1.0111036781596514,
+    "directional_accuracy": 0.46921797004991683,
+    "dm_p_value": 0.10450543714785793,
+    "beats_persistence": false
+  },
+  "litecoin": {
+    "model": "Ridge[candle]",
+    "trained_through": "2026-05-08",
+    "selection": "lowest validation MAE inside the training block",
+    "validation_mae": {
+      "Ridge[candle]": 2.2417498163228777,
+      "RandomForest[candle]": 2.2792348885123266,
+      "HistGradientBoosting[candle]": 2.346140764749049
+    },
+    "test_period": "2024-04-03 to 2026-05-07",
+    "n_test": 765,
+    "model_mae": 2.417808063861724,
+    "persistence_mae": 2.3646594527500127,
+    "mae_vs_persistence": 1.0224762221257278,
+    "directional_accuracy": 0.4823529411764706,
+    "dm_p_value": 0.018449670373447684,
+    "beats_persistence": false
+  },
+  "stellar": {
+    "model": "Ridge[candle]",
+    "trained_through": "2026-05-08",
+    "selection": "lowest validation MAE inside the training block",
+    "validation_mae": {
+      "Ridge[candle]": 0.002554850872001903,
+      "RandomForest[candle]": 0.0026342660366131692,
+      "HistGradientBoosting[candle]": 0.0026652953767111755
+    },
+    "test_period": "2024-07-03 to 2026-05-07",
+    "n_test": 674,
+    "model_mae": 0.008610249728094474,
+    "persistence_mae": 0.008683915584395125,
+    "mae_vs_persistence": 0.9915169769230567,
+    "directional_accuracy": 0.5252225519287834,
+    "dm_p_value": 0.30817875258189426,
+    "beats_persistence": true
+  },
+  "xrp": {
+    "model": "Ridge[candle]",
+    "trained_through": "2026-05-08",
+    "selection": "lowest validation MAE inside the training block",
+    "validation_mae": {
+      "Ridge[candle]": 0.013406043674722121,
+      "RandomForest[candle]": 0.013759699919574582,
+      "HistGradientBoosting[candle]": 0.014056578610377065
+    },
+    "test_period": "2024-04-21 to 2026-05-07",
+    "n_test": 747,
+    "model_mae": 0.05322449530815465,
+    "persistence_mae": 0.051597212931238506,
+    "mae_vs_persistence": 1.0315381836434607,
+    "directional_accuracy": 0.5194109772423026,
+    "dm_p_value": 0.034044453502254636,
+    "beats_persistence": false
+  }
+}

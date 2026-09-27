@@ -1,0 +1,27 @@
+name: CI
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt pytest ruff
+      - run: ruff check .
+      - name: Library tests (synthetic data, no market data needed)
+        run: pytest -q
+      - name: Web app tests
+        working-directory: webapp
+        run: python manage.py test forecasts
+        env:
+          DJANGO_DEBUG: "true"
+      - name: Migrations are up to date
+        working-directory: webapp
+        run: python manage.py makemigrations --check --dry-run
+        env:
+          DJANGO_DEBUG: "true"

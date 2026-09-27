@@ -1,0 +1,11 @@
+<div class="notice">
+  <strong>How good is this model?</strong>
+  On the hold-out period {{ evidence.test_period }} ({{ evidence.n_test }} days), {{ bundle.model_label }} had an MAE
+  {{ evidence.mae_vs_persistence|floatformat:3 }}× that of the persistence baseline (tomorrow's close = today's close).
+  {% if evidence.beats_persistence %}
+    That is slightly better, but the Diebold–Mariano test gives p = {{ evidence.dm_p_value|floatformat:2 }}{% if evidence.dm_p_value >= 0.05 %}, so the difference is not statistically significant{% endif %}.
+  {% else %}
+    It did <strong>not</strong> beat persistence, so persistence is the better reference forecast.
+  {% endif %}
+  Directional accuracy: {{ evidence.directional_accuracy|floatformat:3 }} (0.5 ≈ coin flip).
+</div>

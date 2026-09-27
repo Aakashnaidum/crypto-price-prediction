@@ -1,0 +1,30 @@
+{% extends "forecasts/base.html" %}
+{% block title %}{{ asset.name }} forecast{% endblock %}
+{% block content %}
+<h1>{{ asset.name }} next-day close</h1>
+{% if model_error %}
+  <div class="notice">{{ model_error }}</div>
+{% else %}
+  {% include "forecasts/_evidence.html" %}
+  {% if result %}
+  <div class="card">
+    <div class="grid">
+      <div><div class="muted">Model forecast ({{ bundle.model_label }})</div><div class="big">{{ result.model_forecast|floatformat:6 }}</div>
+           <div class="muted">{{ result.predicted_change_pct|floatformat:3 }}% vs today's close</div></div>
+      <div><div class="muted">Persistence baseline</div><div class="big">{{ result.persistence_forecast|floatformat:6 }}</div>
+           <div class="muted">today's close, unchanged</div></div>
+    </div>
+    {% if not user.is_authenticated %}<p class="muted">Log in to keep a history of your forecasts.</p>{% endif %}
+  </div>
+  {% endif %}
+  <div class="card">
+    <h2 style="margin-top:0">Completed daily candle (UTC)</h2>
+    {% if live %}<p class="muted">Pre-filled with the Yahoo Finance candle for {{ live.date }} ({{ asset.yahoo_ticker }}).</p>{% endif %}
+    <form method="post">{% csrf_token %}
+      {{ form.non_field_errors }}
+      {{ form.as_p }}
+      <button type="submit">Forecast</button>
+    </form>
+  </div>
+{% endif %}
+{% endblock %}

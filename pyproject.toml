@@ -1,0 +1,6 @@
+[tool.ruff]
+line-length = 120
+extend-exclude = ["webapp/forecasts/migrations"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

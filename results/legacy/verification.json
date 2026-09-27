@@ -1,0 +1,157 @@
+{
+  "bitcoin": {
+    "rows_saved": 4541,
+    "rows_recomputed": 4541,
+    "models": {
+      "LinearRegression": {
+        "saved": 2042.5536618565554,
+        "recomputed": 2042.5536611261177,
+        "relative_diff": 3.576100440483824e-10,
+        "match": true
+      },
+      "RandomForestRegressor": {
+        "saved": 27088.49494410309,
+        "recomputed": 27088.496707332135,
+        "relative_diff": 6.509143632217806e-08,
+        "match": true
+      },
+      "DecisionTreeRegressor": {
+        "saved": 27505.582786052404,
+        "recomputed": 27505.582786052404,
+        "relative_diff": 0.0,
+        "match": true
+      },
+      "PersistenceBaseline": {
+        "saved": 1965.9352858723335,
+        "recomputed": 1965.9352858723335,
+        "relative_diff": 0.0,
+        "match": true
+      }
+    },
+    "persistence_beats_best_learned": true
+  },
+  "litecoin": {
+    "rows_saved": 4541,
+    "rows_recomputed": 4541,
+    "models": {
+      "LinearRegression": {
+        "saved": 3.942109636928625,
+        "recomputed": 3.9421096369286235,
+        "relative_diff": 3.3795803573545047e-16,
+        "match": true
+      },
+      "RandomForestRegressor": {
+        "saved": 4.419150540326077,
+        "recomputed": 4.4191204269329,
+        "relative_diff": 6.814294489964312e-06,
+        "match": true
+      },
+      "DecisionTreeRegressor": {
+        "saved": 5.261969249219207,
+        "recomputed": 5.261969249219207,
+        "relative_diff": 0.0,
+        "match": true
+      },
+      "PersistenceBaseline": {
+        "saved": 3.6750156278614132,
+        "recomputed": 3.6750156278614132,
+        "relative_diff": 0.0,
+        "match": true
+      }
+    },
+    "persistence_beats_best_learned": true
+  },
+  "stellar": {
+    "rows_saved": 4084,
+    "rows_recomputed": 4084,
+    "models": {
+      "LinearRegression": {
+        "saved": 0.015624577621000212,
+        "recomputed": 0.015624580570581246,
+        "relative_diff": 1.8877828929685452e-07,
+        "match": true
+      },
+      "RandomForestRegressor": {
+        "saved": 0.01786201973661982,
+        "recomputed": 0.017860510745029264,
+        "relative_diff": 8.448045701479618e-05,
+        "match": true
+      },
+      "DecisionTreeRegressor": {
+        "saved": 0.021260203348221287,
+        "recomputed": 0.021260203348221287,
+        "relative_diff": 0.0,
+        "match": true
+      },
+      "PersistenceBaseline": {
+        "saved": 0.014390754951271392,
+        "recomputed": 0.014390754951271392,
+        "relative_diff": 0.0,
+        "match": true
+      }
+    },
+    "persistence_beats_best_learned": true
+  },
+  "ethereum": {
+    "rows_saved": 3717,
+    "rows_recomputed": 3717,
+    "models": {
+      "LinearRegression": {
+        "saved": 114.7525245391866,
+        "recomputed": 114.75252433088107,
+        "relative_diff": 1.8152587317896503e-09,
+        "match": true
+      },
+      "RandomForestRegressor": {
+        "saved": 137.03528838215266,
+        "recomputed": 137.05767132194933,
+        "relative_diff": 0.00016333705033882488,
+        "match": true
+      },
+      "DecisionTreeRegressor": {
+        "saved": 151.94583152154266,
+        "recomputed": 151.94583152154266,
+        "relative_diff": 0.0,
+        "match": true
+      },
+      "PersistenceBaseline": {
+        "saved": 108.70195487305912,
+        "recomputed": 108.70195487305912,
+        "relative_diff": 0.0,
+        "match": true
+      }
+    },
+    "persistence_beats_best_learned": true
+  },
+  "xrp": {
+    "rows_saved": 4450,
+    "rows_recomputed": 4450,
+    "models": {
+      "LinearRegression": {
+        "saved": 0.08955608043113161,
+        "recomputed": 0.08955589033141226,
+        "relative_diff": 2.1226891400310256e-06,
+        "match": true
+      },
+      "RandomForestRegressor": {
+        "saved": 0.2162494272033228,
+        "recomputed": 0.21615294799470283,
+        "relative_diff": 0.0004461478111997635,
+        "match": true
+      },
+      "DecisionTreeRegressor": {
+        "saved": 0.2922097290197885,
+        "recomputed": 0.2922097290197885,
+        "relative_diff": 0.0,
+        "match": true
+      },
+      "PersistenceBaseline": {
+        "saved": 0.08220843449372539,
+        "recomputed": 0.08220843449372539,
+        "relative_diff": 0.0,
+        "match": true
+      }
+    },
+    "persistence_beats_best_learned": true
+  }
+}

@@ -1,0 +1,12 @@
+{% extends "forecasts/base.html" %}
+{% block title %}My forecasts{% endblock %}
+{% block content %}
+<h1>My forecasts</h1>
+<div class="card table-wrap"><table>
+  <tr><th>When (UTC)</th><th>Asset</th><th>Close</th><th>Model forecast</th><th>Persistence</th><th>Model</th></tr>
+  {% for p in logs %}
+  <tr><td>{{ p.created_at|date:"Y-m-d H:i" }}</td><td>{{ p.get_asset_display }}</td><td>{{ p.close_price|floatformat:6 }}</td>
+      <td>{{ p.model_forecast|floatformat:6 }}</td><td>{{ p.persistence_forecast|floatformat:6 }}</td><td>{{ p.model_label }}</td></tr>
+  {% empty %}<tr><td colspan="6">No forecasts yet.</td></tr>{% endfor %}
+</table></div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "forecasts/base.html" %}
+{% block content %}
+<h1>Next-day close forecasts for five cryptocurrencies</h1>
+<p>Each model uses one completed daily candle (open, high, low, close, volume) to estimate the next day's close,
+and every forecast is shown next to the <strong>persistence baseline</strong> (tomorrow = today). See
+<a href="{% url 'results' %}">Evaluation</a> for the full comparison.</p>
+<div class="grid">
+{% for c in cards %}
+  <div class="card">
+    <h2 style="margin-top:0">{{ c.asset.name }} <span class="muted">{{ c.asset.symbol }}</span></h2>
+    {% if c.bundle %}
+      <p class="muted">Model {{ c.bundle.model_label }} · data through {{ c.bundle.trained_through }}</p>
+      <p>Hold-out MAE vs persistence:
+        <strong class="{% if c.evidence.beats_persistence %}ok{% else %}bad{% endif %}">{{ c.evidence.mae_vs_persistence|floatformat:3 }}×</strong></p>
+      <a href="{% url 'predict' c.asset.key %}">Make a forecast →</a>
+    {% else %}
+      <p class="bad">Model not trained yet.</p>
+    {% endif %}
+  </div>
+{% endfor %}
+</div>
+{% endblock %}

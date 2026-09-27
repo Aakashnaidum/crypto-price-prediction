@@ -1,0 +1,367 @@
+{
+  "bitcoin": {
+    "csv_path": "Bitcoin.csv",
+    "target_definition": "Predict next day's close from the latest completed day's High, Low, Open, and Volume.",
+    "deployed_model": "LinearRegression",
+    "recommended_model": "PersistenceBaseline",
+    "persistence_beats_learned": true,
+    "deployed_path": "BITCOIN.pkl",
+    "rows": 4541,
+    "train_rows": 3632,
+    "test_rows": 909,
+    "candidate_results": {
+      "LinearRegression": {
+        "mae": 1484.1556719220464,
+        "mse": 4172025.461563624,
+        "rmse": 2042.5536618565554,
+        "r2": 0.9917808956875216,
+        "directional_accuracy": 0.5379537953795379
+      },
+      "RandomForestRegressor": {
+        "mae": 19827.941278980903,
+        "mse": 733786558.3366987,
+        "rmse": 27088.49494410309,
+        "r2": -0.4455971857380472,
+        "directional_accuracy": 0.5126512651265126
+      },
+      "DecisionTreeRegressor": {
+        "mae": 20356.56691327686,
+        "mse": 756557084.4003823,
+        "rmse": 27505.582786052404,
+        "r2": -0.49045629091169607,
+        "directional_accuracy": 0.504950495049505
+      },
+      "PersistenceBaseline": {
+        "mae": 1402.0637848941144,
+        "mse": 3864901.548237934,
+        "rmse": 1965.9352858723335,
+        "r2": 0.9923859455616741,
+        "directional_accuracy": 0.0
+      }
+    },
+    "walk_forward": {
+      "LinearRegression": {
+        "mean_rmse": 1451.0524906425933,
+        "std_rmse": 736.3404799851633,
+        "folds": 5
+      },
+      "RandomForestRegressor": {
+        "mean_rmse": 10538.347315664225,
+        "std_rmse": 10227.890708562358,
+        "folds": 5
+      },
+      "DecisionTreeRegressor": {
+        "mean_rmse": 10879.557592645138,
+        "std_rmse": 10075.382606101748,
+        "folds": 5
+      },
+      "PersistenceBaseline": {
+        "mean_rmse": 1384.162071006052,
+        "std_rmse": 694.6755699814241,
+        "folds": 5
+      }
+    },
+    "latest_training_date": "2026-05-08",
+    "latest_training_features": {
+      "High": 80447.265625,
+      "Low": 79205.515625,
+      "Open": 80009.625,
+      "Volume": 33789351540.0,
+      "KnownClose": 80186.765625,
+      "TargetNextClose": 80689.828125
+    },
+    "output_name": "BITCOIN.pkl"
+  },
+  "litecoin": {
+    "csv_path": "Litecoin.csv",
+    "target_definition": "Predict next day's close from the latest completed day's High, Low, Open, and Volume.",
+    "deployed_model": "LinearRegression",
+    "recommended_model": "PersistenceBaseline",
+    "persistence_beats_learned": true,
+    "deployed_path": "LITECOIN.pkl",
+    "rows": 4541,
+    "train_rows": 3632,
+    "test_rows": 909,
+    "candidate_results": {
+      "LinearRegression": {
+        "mae": 2.580175550365439,
+        "mse": 15.540228389565533,
+        "rmse": 3.942109636928625,
+        "r2": 0.9614733943535856,
+        "directional_accuracy": 0.5192519251925193
+      },
+      "RandomForestRegressor": {
+        "mae": 2.813426098250145,
+        "mse": 19.528891498064258,
+        "rmse": 4.419150540326077,
+        "r2": 0.9515848877766351,
+        "directional_accuracy": 0.5357535753575358
+      },
+      "DecisionTreeRegressor": {
+        "mae": 3.4541183467768204,
+        "mse": 27.68832037972854,
+        "rmse": 5.261969249219207,
+        "r2": 0.9313564142340636,
+        "directional_accuracy": 0.5346534653465347
+      },
+      "PersistenceBaseline": {
+        "mae": 2.3244048770111387,
+        "mse": 13.505739865025618,
+        "rmse": 3.6750156278614132,
+        "r2": 0.9665172029201143,
+        "directional_accuracy": 0.0
+      }
+    },
+    "walk_forward": {
+      "LinearRegression": {
+        "mean_rmse": 5.491968174920386,
+        "std_rmse": 3.8927331671586685,
+        "folds": 5
+      },
+      "RandomForestRegressor": {
+        "mean_rmse": 6.438868856562616,
+        "std_rmse": 5.222681462615197,
+        "folds": 5
+      },
+      "DecisionTreeRegressor": {
+        "mean_rmse": 7.475418637813147,
+        "std_rmse": 6.064413688132094,
+        "folds": 5
+      },
+      "PersistenceBaseline": {
+        "mean_rmse": 5.081175764708089,
+        "std_rmse": 3.5692409640419203,
+        "folds": 5
+      }
+    },
+    "latest_training_date": "2026-05-08",
+    "latest_training_features": {
+      "High": 58.91109848022461,
+      "Low": 56.15739440917969,
+      "Open": 56.43155670166016,
+      "Volume": 314661149.0,
+      "KnownClose": 58.233158111572266,
+      "TargetNextClose": 58.029998779296875
+    },
+    "output_name": "LITECOIN.pkl"
+  },
+  "stellar": {
+    "csv_path": "Stellar.csv",
+    "target_definition": "Predict next day's close from the latest completed day's High, Low, Open, and Volume.",
+    "deployed_model": "LinearRegression",
+    "recommended_model": "PersistenceBaseline",
+    "persistence_beats_learned": true,
+    "deployed_path": "STELLAR.pkl",
+    "rows": 4084,
+    "train_rows": 3267,
+    "test_rows": 817,
+    "candidate_results": {
+      "LinearRegression": {
+        "mae": 0.008322431910790448,
+        "mse": 0.00024412742583466065,
+        "rmse": 0.015624577621000212,
+        "r2": 0.9827142629527066,
+        "directional_accuracy": 0.5324357405140759
+      },
+      "RandomForestRegressor": {
+        "mae": 0.009971895658112387,
+        "mse": 0.000319051749071396,
+        "rmse": 0.01786201973661982,
+        "r2": 0.9774091558124962,
+        "directional_accuracy": 0.5006119951040392
+      },
+      "DecisionTreeRegressor": {
+        "mae": 0.012130504719178653,
+        "mse": 0.0004519962464077196,
+        "rmse": 0.021260203348221287,
+        "r2": 0.9679958602149886,
+        "directional_accuracy": 0.5067319461444308
+      },
+      "PersistenceBaseline": {
+        "mae": 0.007650145793486402,
+        "mse": 0.00020709382806754207,
+        "rmse": 0.014390754951271392,
+        "r2": 0.9853364715420487,
+        "directional_accuracy": 0.0
+      }
+    },
+    "walk_forward": {
+      "LinearRegression": {
+        "mean_rmse": 0.015270206054800683,
+        "std_rmse": 0.006051292623098012,
+        "folds": 5
+      },
+      "RandomForestRegressor": {
+        "mean_rmse": 0.01850286018561392,
+        "std_rmse": 0.008358894423229407,
+        "folds": 5
+      },
+      "DecisionTreeRegressor": {
+        "mean_rmse": 0.021133508949748865,
+        "std_rmse": 0.009224759003814672,
+        "folds": 5
+      },
+      "PersistenceBaseline": {
+        "mean_rmse": 0.01421081590949363,
+        "std_rmse": 0.005669690583598859,
+        "folds": 5
+      }
+    },
+    "latest_training_date": "2026-05-08",
+    "latest_training_features": {
+      "High": 0.1654909998178482,
+      "Low": 0.1575569957494735,
+      "Open": 0.1579979956150055,
+      "Volume": 131196179.0,
+      "KnownClose": 0.1633139997720718,
+      "TargetNextClose": 0.162322998046875
+    },
+    "output_name": "STELLAR.pkl"
+  },
+  "ethereum": {
+    "csv_path": "Ethereum.csv",
+    "target_definition": "Predict next day's close from the latest completed day's High, Low, Open, and Volume.",
+    "deployed_model": "LinearRegression",
+    "recommended_model": "PersistenceBaseline",
+    "persistence_beats_learned": true,
+    "deployed_path": "ETHEREUM.pkl",
+    "rows": 3717,
+    "train_rows": 2973,
+    "test_rows": 744,
+    "candidate_results": {
+      "LinearRegression": {
+        "mae": 81.45562147740866,
+        "mse": 13168.141888116621,
+        "rmse": 114.7525245391866,
+        "r2": 0.9762077702578533,
+        "directional_accuracy": 0.5255376344086021
+      },
+      "RandomForestRegressor": {
+        "mae": 97.38259353448177,
+        "mse": 18778.670261979743,
+        "rmse": 137.03528838215266,
+        "r2": 0.9660706543929152,
+        "directional_accuracy": 0.5349462365591398
+      },
+      "DecisionTreeRegressor": {
+        "mae": 112.0184445387691,
+        "mse": 23087.535716773025,
+        "rmse": 151.94583152154266,
+        "r2": 0.9582853861523781,
+        "directional_accuracy": 0.5483870967741935
+      },
+      "PersistenceBaseline": {
+        "mae": 75.27098559307795,
+        "mse": 11816.11499322458,
+        "rmse": 108.70195487305912,
+        "r2": 0.9786506156322536,
+        "directional_accuracy": 0.0
+      }
+    },
+    "walk_forward": {
+      "LinearRegression": {
+        "mean_rmse": 112.75761162036983,
+        "std_rmse": 23.25886548182011,
+        "folds": 5
+      },
+      "RandomForestRegressor": {
+        "mean_rmse": 353.6830280882421,
+        "std_rmse": 416.2444484410924,
+        "folds": 5
+      },
+      "DecisionTreeRegressor": {
+        "mean_rmse": 378.1778314730904,
+        "std_rmse": 427.8852516106477,
+        "folds": 5
+      },
+      "PersistenceBaseline": {
+        "mean_rmse": 106.56875056167401,
+        "std_rmse": 20.949930123052553,
+        "folds": 5
+      }
+    },
+    "latest_training_date": "2026-05-08",
+    "latest_training_features": {
+      "High": 2320.692138671875,
+      "Low": 2265.833251953125,
+      "Open": 2291.07568359375,
+      "Volume": 20013463010.0,
+      "KnownClose": 2306.97216796875,
+      "TargetNextClose": 2325.81005859375
+    },
+    "output_name": "ETHEREUM.pkl"
+  },
+  "xrp": {
+    "csv_path": "XRP.csv",
+    "target_definition": "Predict next day's close from the latest completed day's High, Low, Open, and Volume.",
+    "deployed_model": "LinearRegression",
+    "recommended_model": "PersistenceBaseline",
+    "persistence_beats_learned": true,
+    "deployed_path": "XRP.pkl",
+    "rows": 4450,
+    "train_rows": 3560,
+    "test_rows": 890,
+    "candidate_results": {
+      "LinearRegression": {
+        "mae": 0.05120435032450501,
+        "mse": 0.008020291542187315,
+        "rmse": 0.08955608043113161,
+        "r2": 0.9905953378712729,
+        "directional_accuracy": 0.5404494382022472
+      },
+      "RandomForestRegressor": {
+        "mae": 0.1381555939242923,
+        "mse": 0.0467638147657652,
+        "rmse": 0.2162494272033228,
+        "r2": 0.9451643527658523,
+        "directional_accuracy": 0.5146067415730337
+      },
+      "DecisionTreeRegressor": {
+        "mae": 0.17664504735982725,
+        "mse": 0.0853865257338182,
+        "rmse": 0.2922097290197885,
+        "r2": 0.8998750331395785,
+        "directional_accuracy": 0.5157303370786517
+      },
+      "PersistenceBaseline": {
+        "mae": 0.04551346147997996,
+        "mse": 0.006758226701909139,
+        "rmse": 0.08220843449372539,
+        "r2": 0.9920752458453072,
+        "directional_accuracy": 0.0
+      }
+    },
+    "walk_forward": {
+      "LinearRegression": {
+        "mean_rmse": 0.0660386565889434,
+        "std_rmse": 0.02483139877581076,
+        "folds": 5
+      },
+      "RandomForestRegressor": {
+        "mean_rmse": 0.08590248250257186,
+        "std_rmse": 0.055492261374017124,
+        "folds": 5
+      },
+      "DecisionTreeRegressor": {
+        "mean_rmse": 0.11482841673471848,
+        "std_rmse": 0.07591782605985171,
+        "folds": 5
+      },
+      "PersistenceBaseline": {
+        "mean_rmse": 0.0544466777356265,
+        "std_rmse": 0.0299284679219587,
+        "folds": 5
+      }
+    },
+    "latest_training_date": "2026-05-08",
+    "latest_training_features": {
+      "High": 1.4240349531173706,
+      "Low": 1.3782529830932615,
+      "Open": 1.387125015258789,
+      "Volume": 1668301953.0,
+      "KnownClose": 1.4182850122451782,
+      "TargetNextClose": 1.4185999631881714
+    },
+    "output_name": "XRP.pkl"
+  }
+}

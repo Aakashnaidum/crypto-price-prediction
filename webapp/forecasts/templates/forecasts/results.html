@@ -1,0 +1,25 @@
+{% extends "forecasts/base.html" %}{% load fmt %}
+{% block title %}Evaluation{% endblock %}
+{% block content %}
+<h1>Evaluation</h1>
+{% if not data %}
+  <div class="notice">No results file found. Run <code>python scripts/run_experiments.py</code>.</div>
+{% else %}
+<p>Chronological hold-out (last 20% of days). <em>MAE / persistence</em> below 1 means the model beat "tomorrow = today".
+DM p is a Diebold–Mariano test against persistence. Generated {{ data.generated_utc }}.</p>
+{% for r in rows %}
+<div class="card">
+  <h2 style="margin-top:0">{{ r.asset.name }}</h2>
+  <p class="muted">Test {{ r.holdout.test_start }} → {{ r.holdout.test_end }} ({{ r.holdout.n_test }} days) · trained on {{ r.holdout.n_train }} days</p>
+  <div class="table-wrap"><table>
+    <tr><th>Model</th><th>MAE</th><th>RMSE</th><th>MAPE %</th><th>MAE / persistence</th><th>Dir. acc.</th><th>DM p</th></tr>
+    {% for label, m in r.models %}
+    <tr><td>{{ label }}</td><td>{{ m.mae|num:4 }}</td><td>{{ m.rmse|num:4 }}</td><td>{{ m.mape_pct|num:2 }}</td>
+        <td class="{% if m.mae_vs_persistence < 1 %}ok{% elif m.mae_vs_persistence > 1 %}bad{% endif %}">{{ m.mae_vs_persistence|num:3 }}</td>
+        <td>{{ m.directional_accuracy|num:3 }}</td><td>{{ m.p_value|num:3 }}</td></tr>
+    {% endfor %}
+  </table></div>
+</div>
+{% endfor %}
+{% endif %}
+{% endblock %}

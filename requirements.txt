@@ -1,0 +1,8 @@
+# Tested with Python 3.11. Model bundles in models/ were saved with scikit-learn 1.8.0;
+# keep that version (or retrain with scripts/train_models.py after upgrading).
+django==4.2.30
+joblib==1.5.3
+numpy==2.4.4
+pandas==3.0.2
+scikit-learn==1.8.0
+scipy==1.17.1
